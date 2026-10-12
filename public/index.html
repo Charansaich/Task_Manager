@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+
+        <header>
+            <p class="eyebrow">PRODUCTIVITY DASHBOARD</p>
+
+            <h1>My Task Manager</h1>
+
+            <p class="subtitle">
+                Organize your work, one task at a time.
+            </p>
+        </header>
+
+        <section class="task-card">
+
+            <form id="task-form">
+                <label for="task-input">
+                    What do you need to do?
+                </label>
+
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="e.g. Deploy an app on AWS"
+                        maxlength="200"
+                        required
+                    >
+
+                    <button type="submit" id="add-button">
+                        Add Task
+                    </button>
+                </div>
+            </form>
+
+            <div class="stats">
+
+                <div class="stat-box">
+                    <span id="total-count">0</span>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="stat-box">
+                    <span id="pending-count">0</span>
+                    <p>Pending</p>
+                </div>
+
+                <div class="stat-box">
+                    <span id="completed-count">0</span>
+                    <p>Completed</p>
+                </div>
+
+            </div>
+
+            <div id="status" role="status" aria-live="polite"></div>
+
+            <ul id="task-list"></ul>
+
+        </section>
+
+        <footer>
+            Built with Node.js, Express, SQLite and AWS EC2.
+        </footer>
+
+    </main>
+</body>
+</html>
